@@ -27,44 +27,52 @@ public class TesteLED {
     public static void main(String[] args){
 
         Scanner leitor = new Scanner(System.in);
-        int val = leitor.nextInt(); /*Quantidade de vezes*/
+        int val = Integer.parseInt(leitor.nextLine());/*Quantidade de vezes*/
         int cota = 0;
 
-        String[] vetor = new String[val]; 
+
+        String[] vetor = new String[val];
 
         /*Preenchimento do meu vetor*/
         for(int i = 0; i < val; i++){
+        cota = 0;
             System.out.println("Digite o " + (i + 1) + "º numero: ");
 
-            vetor[i] = leitor.next();
+            vetor[i] = leitor.nextLine();
 
+                /*
+                * Usar charAt(j)
+                * Usar Integer
+                * Usar parseInt
+                *
+                */
 
+                for(int j = 0; j < vetor[i].length(); j++)
 
-                if (vetor[i] == "1") {
+                if (vetor[i].charAt(j) == '1') {
                     cota = cota + 2;
-                } else if (vetor[i] == "2") {
+                } else if (vetor[i].charAt(j) == '2') {
                     cota = cota + 5;
-                } else if (vetor[i] == "3") {
+                } else if (vetor[i].charAt(j) == '3') {
                     cota = cota + 5;
-                } else if (vetor[i] == "4") {
+                } else if (vetor[i].charAt(j) == '4') {
                     cota = cota + 4;
-                } else if (vetor[i] == "5") {
+                } else if (vetor[i].charAt(j) == '5') {
                     cota = cota + 5;
-                } else if (vetor[i] == "6") {
+                } else if (vetor[i].charAt(j) == '6') {
                     cota = cota + 6;
-                } else if (vetor[i] == "7") {
+                } else if (vetor[i].charAt(j) == '7') {
                     cota = cota + 3;
-                } else if (vetor[i] == "8") {
+                } else if (vetor[i].charAt(j) == '8') {
                     cota = cota + 7;
-                } else if (vetor[i] == "9") {
+                } else if (vetor[i].charAt(j) == '9') {
                     cota = cota + 6;
-                } else if (vetor[i] == "0") {
+                } else if (vetor[i].charAt(j) == '0') {
                     cota = cota + 6;
                 }
-
             System.out.println("Numero de Leds = "+cota);
-            cota = 0;
         }
+
     }
 }
 
